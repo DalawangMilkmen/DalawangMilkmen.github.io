@@ -56,11 +56,12 @@
 	<!-- End Facebook Pixel Code -->
 	<!-- One signal script -->
 	<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+	<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
 	<script>
 	  var OneSignal = window.OneSignal || [];
 	  OneSignal.push(function() {
 	    OneSignal.init({
-	      appId: "5ec1ca8c-bf85-420c-ad75-bb95ae6a02b3",
+	      appId: "f1570eb8-769f-484d-b98d-6172510bd6f8",
 	    });
 	  });
 	</script>
@@ -680,6 +681,12 @@
 				send.style.display = 'none';
 				loading.style.display = 'block';
 				sendOrder();
+				OneSignal.push(function() {
+
+					OneSignal.sendTag("orderSent", "true", function(tagsSent) {
+						console.log('done');
+					});
+				});
 
 			}
 		});
