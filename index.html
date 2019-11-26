@@ -204,9 +204,9 @@
 		                                	</div>
 
 		                            	</div>
-										<!-- <p style="text-align:center">
-											Order 7 or more yogurts to have a free delivery
-										</p> -->
+										<p style="text-align:center; margin-top:10px" id="bl">
+
+										</p>
 		                            </div>
 		                            <div class="tab-pane" id="contact">
 		                                <h4 class="info-text">Your contact details </h4>
@@ -537,6 +537,7 @@
 		var sp = document.getElementById('sp');
 		var swp = document.getElementById('swp');
 		var up = document.getElementById('up');
+		var bl = document.getElementById('bl');
 		var deliveryTime = document.getElementById('deliveryTime');
 		var district = document.getElementById('district');
 		var barangaySelect = document.getElementById('barangay');
@@ -969,6 +970,7 @@
 				sp.innerText = strawberryPrice;
 				swp.innerText = sweetenedPrice;
 				up.innerText = unsweetenedPrice;
+				bl.innerHTML = delivery.records[10].fields.info;
 				// console.log(unsweetenedPrice ,raspberryPrice, mangoPrice);
 				// localStorage.setItem('areas', JSON.stringify(product.records));
 
