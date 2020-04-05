@@ -58,12 +58,12 @@
 	<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
 	<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
 	<script>
-	  var OneSignal = window.OneSignal || [];
-	  OneSignal.push(function() {
-	    OneSignal.init({
-	      appId: "f1570eb8-769f-484d-b98d-6172510bd6f8",
-	    });
-	  });
+	var OneSignal = window.OneSignal || [];
+	OneSignal.push(function() {
+		OneSignal.init({
+			appId: "f1570eb8-769f-484d-b98d-6172510bd6f8",
+		});
+	});
 	</script>
 </head>
 
@@ -77,7 +77,49 @@
 			margin-top: -20px;
 			text-align: center;
 		}
+		.title_no_margin{
+			margin: 0;
+			text-align: center;
+			color: #fff
+		}
+		.notification_reorder{
+			height:0px;
+			margin-top: 0;
+			background-color: #7B9DCF;
+			box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px 0 rgba(0,0,0,.06);
+		}
+		.made-with-mk {
+		    width: 100px;
+		    height: 50px;
+		    display: block;
+		    position: fixed;
+		    z-index: 555;
+		    top: 40px;
+		    right: 40px;
+		    border-radius: 30px;
+		    background-color: #7B9DCF;
+		    border: 1px solid rgba(255, 255, 255, 0.15);
+		    color: #FFFFFF;
+		    cursor: pointer;
+		    padding: 10px 12px;
+		    white-space: nowrap;
+		    overflow: hidden;
+		    -webkit-transition: 0.55s cubic-bezier(0.6, 0, 0.4, 1);
+		    -moz-transition: 0.55s cubic-bezier(0.6, 0, 0.4, 1);
+		    -o-transition: 0.55s cubic-bezier(0.6, 0, 0.4, 1);
+		    transition: 0.55s cubic-bezier(0.6, 0, 0.4, 1);
+		}
 	</style>
+	<div class="notification_reorder">
+		<div class="">
+
+		<h5 class="title_no_margin">
+			Hello <span id="rnam" ></span>
+
+		</h5>
+	</div>
+
+	</div>
 	<div class="image-container set-full-height" style="background-image: url('assets/img/dmm/background-dmm.jpg')">
 	    <!--   Creative Tim Branding   -->
 	    <a href="https://www.facebook.com/DalawangMilkmen/" target="_blank">
@@ -89,11 +131,12 @@
 	                Dalawang Milkmen
 	            </div> -->
 	        </div>
+
 	    </a>
 
 		<!--  Made With Material Kit  -->
 		<!-- <a href="http://demos.creative-tim.com/material-kit/index.html?ref=material-bootstrap-wizard" class="made-with-mk">
-			<div class="brand">MK</div>
+			<div class="brand">Re-order</div>
 			<div class="made-with">Made with <strong>Material Kit</strong></div>
 		</a> -->
 
@@ -209,7 +252,11 @@
 										</p>
 		                            </div>
 		                            <div class="tab-pane" id="contact">
-		                                <h4 class="info-text">Your contact details </h4>
+										<div class="col-sm-12">
+											<h4 class="info-text">Your contact details
+											</h4>
+										</div>
+
 										<div class="row">
   		                                	<div class="col-sm-10 col-sm-offset-1">
   												<div class="input-group">
@@ -277,7 +324,7 @@
 		                                      <div class="form-group label-floating">
 		                                        	<label class="control-label">District name <small>(required)</small></label>
 		                                        	<select id='district' name="district"  class="form-control">
-		                                            	<option disabled="" selected=""></option>
+		                                            	<option disabled=""></option>
 		                                            	<!-- <option>Makati</option>
 		                                            	<option>BGC</option> -->
 		                                        	</select>
@@ -296,42 +343,9 @@
 		                                    <div class="col-sm-5 col-sm-offset-1">
 		                                    	<div class="form-group label-floating">
 		                                        	<label class="control-label">Barangay name  <small>(required)</small></label>
-		                                        	<select id="barangay" name="barangay" class="form-control">
-		                                    			<option disabled="" selected=""></option>
-
-		                                            	<!-- <option>Bangkal</option>
-		                                            	<option>Bel-Air</option>
-		                                            	<option>Carmona</option>
-		                                            	<option>Cembo</option>
-		                                            	<option>Comembo</option>
-		                                            	<option>Dasmariñas</option>
-		                                            	<option>East Rembo</option>
-		                                            	<option>Forbes Park</option>
-		                                            	<option>Fort Bonifacio</option>
-		                                            	<option>Guadalupe Nuevo</option>
-		                                            	<option>Guadalupe Viejo</option>
-														<option>Kasilawan</option>
-		                                            	<option>La Paz</option>
-		                                            	<option>Magallanes</option>
-		                                            	<option>Olympia</option>
-		                                            	<option>Palanan</option>
-		                                            	<option>Pembo</option>
-		                                            	<option>Pinagkaisahan</option>
-		                                            	<option>Pio del Pilar</option>
-		                                            	<option>Pitogo</option>
-		                                            	<option>Poblacion</option>
-		                                            	<option>Rizal</option>
-		                                            	<option>San Antonio</option>
-		                                            	<option>San Isidro</option>
-		                                            	<option>San Lorenzo</option>
-		                                            	<option>Santa Cruz</option>
-		                                            	<option>Singkamas</option>
-		                                            	<option>South Cembo</option>
-		                                            	<option>Tejeros</option>
-		                                            	<option>Urdaneta</option>
-		                                            	<option>Valenzuela</option>
-		                                            	<option>West Rembo</option> -->
-		                                        	</select>
+													<input type="text" id="barangay" name="barangay" class="form-control" value="">
+		                                        	<!-- <select id="barangay" name="barangay" class="form-control">
+		                                        	<!-- </select> -->
 		                                    	</div>
 		                                    </div>
 		                                    <div class="col-sm-5">
@@ -368,7 +382,7 @@
 		                                    <div class="col-sm-4 col-sm-offset-1">
 												<div class="form-group label-floating">
 													<!-- <label class="control-label">Dalawang Milkmen Engagement</label> -->
-													<p class="description">Good news our glass jars are endlessly recyclable ♻️ and we give 5₱ per returned jar & lid!</p>
+													<p class="description">Good news our glass jars are endlessly recyclable ♻️ and we give 15₱ per returned jar & lid!</p>
 												</div>
 		                                        <div class="form-group label-floating">
 		                                            <label class="control-label"># of jars to return</label>
@@ -502,6 +516,7 @@
 	<script type="text/javascript">
 	document.addEventListener("DOMContentLoaded", function(e) {
 
+
 		if (document.documentMode || /Edge/.test(navigator.userAgent)) {
 		    alert("Sorry our orders doesn't work on Edge and Internet Explorer" );
 		}
@@ -540,9 +555,34 @@
 		var bl = document.getElementById('bl');
 		var deliveryTime = document.getElementById('deliveryTime');
 		var district = document.getElementById('district');
-		var barangaySelect = document.getElementById('barangay');
+		var barangayInupt = document.getElementById('barangay');
 		var apiKey = "keyy91JVw4nn9lwqH";
 		var baseid = "appWeyp3UlQHHV5By";
+
+
+		var setCustomerInfo = function(lastorder) {
+			console.log(lastorder.fields['First Name']);
+			jQuery('#contact>div>h4').html('Hello '+lastorder.fields['First Name']+',good to see you again<br><span style="font-size:12px;">We filled up you previous information, to make your life easier</span>')
+			document.querySelectorAll('input[name$="firstname"]')[0].value = lastorder.fields['First Name'] ;
+			document.querySelectorAll('input[name$="lastname"]')[0].value = lastorder.fields['Last Name'] ;
+			document.querySelectorAll('input[name$="email"]')[0].value= lastorder.fields['Email'] ;
+			document.querySelectorAll('input[name$="phone"]')[0].value= lastorder.fields['Phone'] ;
+			// var deliveryTime = deliveryTimeselect.options[deliveryTimeselect.selectedIndex].value;
+			// // var barangayselect = document.getElementById("barangay").value;
+			var barangay = document.querySelectorAll('input[name$="barangay"]')[0].value= lastorder.fields['Barangay'] ;
+			console.log(jQuery('#district option[value="'+lastorder.fields['District']+'"]'));
+			jQuery('#district').append('<option value="'+lastorder.fields['deliveryfee']+'" selected>'+lastorder.fields['District']+'</option>');
+			// jQuery('#district').remove('<option value="'+lastorder.fields['deliveryfee']+'" >'+lastorder.fields['District']+'</option>');
+			// districtselect.options.text;
+			document.querySelectorAll('input[name$="street"]')[0].value = lastorder.fields['Street'] ;
+			document.querySelectorAll('input[name$="housenb"]')[0].value= lastorder.fields['House number'] ;
+			// document.querySelectorAll('input[name$="bill"]')[0].value= lastorder.fields['Phone'] ;
+			document.querySelectorAll('input[name$="floor"]')[0].value= lastorder.fields['Floor / Unit / Room#'] ;
+
+			$(".form-group").removeClass("is-empty");
+
+
+		};
 
 
 		var initStock = function(product) {
@@ -577,23 +617,24 @@
 
 			this.option = document.createElement('option')
 			this.option.innerText = city.fields.Name;
+			this.option.setAttribute('value',city.fields.DeliveryFees);
 			district.append(this.option)
 
 		}
-		var initBarangay = function(barangay) {
+		// var initBarangay = function(barangay) {
+		// //
+		// 	this.option = document.createElement('option')
+		// 	this.option.innerText = barangay.fields.Name;
+		// 	this.option.setAttribute('value',barangay.fields.DeliveryFees);
+		// 	barangaySelect.append(this.option)
+		//
+		//
+		// }
 
-			this.option = document.createElement('option')
-			this.option.innerText = barangay.fields.Name;
-			this.option.setAttribute('value',barangay.fields.DeliveryFees);
-			barangaySelect.append(this.option)
-
-
-		}
-
-		$('#barangay').on('change',function(){
+		$('#district').on('change',function(){
 	        var optionValue = $(this).val();
 			deliveryPrice = optionValue;
-			console.log(deliveryPrice);
+			// console.log(deliveryPrice);
 			calculateTotal();
 			$('#summay-deliveryfee').text(deliveryPrice);
     	});
@@ -604,11 +645,11 @@
 			totalProduct = parseFloat(unsweetened)* unsweetenedPrice+ parseFloat(mango)*mangoPrice+ parseFloat(raspberry)*raspberryPrice + parseFloat(strawberry)*strawberryPrice + parseFloat(sweetened)*sweetenedPrice;
 
 			console.log( 'prix total :', totalProduct);
-			console.log(parseFloat(unsweetened)* unsweetenedPrice);
-			console.log(parseFloat(mango)*mangoPrice);
-			console.log(parseFloat(raspberry)*raspberryPrice);
-			console.log(parseFloat(strawberry)*strawberryPrice);
-			console.log(parseFloat(sweetened) *sweetenedPrice);
+			// console.log(parseFloat(unsweetened)* unsweetenedPrice);
+			// console.log(parseFloat(mango)*mangoPrice);
+			// console.log(parseFloat(raspberry)*raspberryPrice);
+			// console.log(parseFloat(strawberry)*strawberryPrice);
+			// console.log(parseFloat(sweetened) *sweetenedPrice);
 			// if (totalProduct < 7) {
 			// 	$('#summay-deliveryfee').text('50');
 			// 	$('#deliveryFree').text('👍 Order 7 or more yogurts to have a free delivery');
@@ -682,21 +723,17 @@
 				send.style.display = 'none';
 				loading.style.display = 'block';
 				sendOrder();
-				OneSignal.push(function() {
-
-					OneSignal.sendTag("orderSent", "true", function(tagsSent) {
-						console.log('done');
-					});
-				});
 
 			}
 		});
 
 
-		var sendOrder = function() {
+		var sendOrder = function(lastorder) {
+			if(lastorder){
+
+			}else {
 
 			// Customer info
-
 			var firstname = document.querySelectorAll('input[name$="firstname"]')[0].value;
 			var lastname = document.querySelectorAll('input[name$="lastname"]')[0].value;
 			var email = document.querySelectorAll('input[name$="email"]')[0].value;
@@ -706,15 +743,16 @@
 
 			var deliveryTimeselect = document.getElementById("deliveryTime");
 			var deliveryTime = deliveryTimeselect.options[deliveryTimeselect.selectedIndex].value;
-			var barangayselect = document.getElementById("barangay");
-			var barangay = barangayselect.options[barangayselect.selectedIndex].text;
+			// var barangayselect = document.getElementById("barangay").value;
+			var barangay = document.querySelectorAll('input[name$="barangay"]')[0].value;
 			var districtselect = document.getElementById("district");
-			var district = districtselect.options[districtselect.selectedIndex].value;
+			var district = districtselect.options[districtselect.selectedIndex].text;
 			var street = document.querySelectorAll('input[name$="street"]')[0].value;
 			var housenb = document.querySelectorAll('input[name$="housenb"]')[0].value;
 			var bill = document.querySelectorAll('input[name$="bill"]')[0].value;
 			var floor = document.querySelectorAll('input[name$="floor"]')[0].value;
 
+		}
 		var order = {"fields":
 						{
 						    "First Name": firstname,
@@ -734,21 +772,22 @@
 						    "Street": street,
 						    "House number": housenb,
 							"Delivery Date": deliveryDate,
-							"Change for": bill,
+							// "Change for": bill,
 							"Floor / Unit / Room#": floor ,
 							"deliveryfee" : deliveryPrice,
 					  	}
 					}
 
-			console.log(order.fields.Mango);
+			// console.log(order.fields.Mango);
 			SaveOrder(order);
+			SaveLocalStorage(order)
 
 
 
 		}
 
 		SaveOrder = (order) =>{
-			console.log(order.fields.Mango);
+			console.log(order);
 
 
 			var url = 'https://api.airtable.com/v0/'+baseid+'/Customer'
@@ -800,6 +839,11 @@
 
 
 		}
+
+		SaveLocalStorage = (order) =>{
+			localStorage.setItem('lastorder', JSON.stringify(order));
+
+		};
 
 		UdpateStock = (yogourt,amount) =>{
 			yogourt.fields.stock = yogourt.fields.stock - amount;
@@ -913,30 +957,30 @@
 			});
 
 		}
-		fetchBarangay = () =>{
-			let url = 'https://api.airtable.com/v0/'+baseid+'/barangay?maxRecords=200&view=Grid%20view'
-
-
-			fetch(url,{
-			   method: 'get',
-			   headers: new Headers({
-				 'Authorization': 'Bearer '+apiKey,
-			}),
-			})
-			.then((response) => response.json())
-			.then((barangay) => {
-				barangay = barangay.records;
-				console.log(barangay);
-
-				for (var i = 0; i < barangay.length; i++) {
-					initBarangay(barangay[i]);
-				}
-			})
-			.catch((error) => {
-				console.error(error);
-			});
-
-		}
+		// fetchBarangay = () =>{
+		// 	let url = 'https://api.airtable.com/v0/'+baseid+'/barangay?maxRecords=200&view=Grid%20view'
+		//
+		//
+		// 	fetch(url,{
+		// 	   method: 'get',
+		// 	   headers: new Headers({
+		// 		 'Authorization': 'Bearer '+apiKey,
+		// 	}),
+		// 	})
+		// 	.then((response) => response.json())
+		// 	.then((barangay) => {
+		// 		barangay = barangay.records;
+		// 		console.log(barangay);
+		//
+		// 		for (var i = 0; i < barangay.length; i++) {
+		// 			// initBarangay(barangay[i]);
+		// 		}
+		// 	})
+		// 	.catch((error) => {
+		// 		console.error(error);
+		// 	});
+		//
+		// }
 		fetchInfo = () =>{
 
 			let url = 'https://api.airtable.com/v0/'+baseid+'/Info?maxRecords=20&view=Grid%20view'
@@ -950,6 +994,7 @@
 			})
 			.then((response) => response.json())
 			.then((delivery) => {
+				console.log('yo');
 				console.log(delivery.records)
 				// console.log(delivery.records[0].fields.Date);
 				document.getElementById('nextDelivery').innerText = delivery.records[0].fields.info;
@@ -987,8 +1032,14 @@
 		fetchProduct();
 		fetchInfo();
 		fetchCities();
-		fetchBarangay();
+		// fetchBarangay();
 		fetchDeliveryTime();
+		var lastorder = localStorage.getItem('lastorder');
+		if (lastorder) {
+			lastorder = JSON.parse(lastorder);
+			console.log(lastorder);
+			setCustomerInfo(lastorder)
+		}
 
 
 
