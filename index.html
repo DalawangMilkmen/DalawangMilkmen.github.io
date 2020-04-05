@@ -562,7 +562,7 @@
 
 		var setCustomerInfo = function(lastorder) {
 			console.log(lastorder.fields['First Name']);
-			jQuery('#contact>div>h4').html('Hello '+lastorder.fields['First Name']+',good to see you again<br><span style="font-size:12px;">We filled up you previous information, to make your life easier</span>')
+			jQuery('#contact>div>h4').html('Hello '+lastorder.fields['First Name']+', good to see you again<br><span style="font-size:12px;">We filled up your previous informations, to make your life easier</span>')
 			document.querySelectorAll('input[name$="firstname"]')[0].value = lastorder.fields['First Name'] ;
 			document.querySelectorAll('input[name$="lastname"]')[0].value = lastorder.fields['Last Name'] ;
 			document.querySelectorAll('input[name$="email"]')[0].value= lastorder.fields['Email'] ;
