@@ -709,7 +709,7 @@
 		});
 
 		next.addEventListener('click',function (e) {
-			if (totalProduct < 240) {
+			if (totalProduct < (unsweetenedPrice*3)) {
 				alert('Sorry, the minimum order is 3 yogurts ')
 				e.preventDefault();
 				$('#previous').click();
@@ -717,7 +717,7 @@
 		});
 
 		send.addEventListener('click',function (e) {
-			if (totalProduct < 240) {
+			if (totalProduct < (unsweetenedPrice*3)) {
 				alert('Sorry, the minimum order is 3 yogurts ')
 			}else {
 				send.style.display = 'none';
