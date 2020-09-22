@@ -69,6 +69,10 @@
 
 <body>
 	<style media="screen">
+		
+		.container{
+		display : none; }
+			
 		.image-container:before{
 			opacity: .4!important;
 		}
@@ -141,6 +145,7 @@
 		</a> -->
 
 	    <!--   Big container   -->
+		<h2>we have a new website, you will be redirected in 10 seconds, or clic <a href=""https://www.dalawangmilkmen.com/>dalawangmilkmen.com</a></h2>
 	    <div class="container">
 	        <div class="row">
 		        <div class="col-sm-8 col-sm-offset-2">
@@ -515,6 +520,12 @@
 	<script src="assets/js/jquery.validate.min.js"></script>
 	<script type="text/javascript">
 	document.addEventListener("DOMContentLoaded", function(e) {
+		
+		setTimeout(function(){ 
+			document.location = "https://www.dalawangmilkmen.com/"
+		}, 5000);
+		
+		
 
 
 		if (document.documentMode || /Edge/.test(navigator.userAgent)) {
